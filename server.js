@@ -4,6 +4,7 @@ const app = express();
 const {connectdb, startCronJob}= require('./helper/index');
 const router = require('./router/index');
 const attendanceRoutes = require('./router/attendance');
+const errorhandler = require('./middleware/error_handler');
 require('dotenv').config();
 const path = require('path');
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));

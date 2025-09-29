@@ -22,6 +22,7 @@ router.post('/leaveClass/:u_uuid', authcontroller.leaveClass);
 router.post('/eventaccepted', eventcontroller.eventaccepted);
 router.post('/approveUserRequest', authcontroller.approveUserRequest);
 router.post('/userlist', authcontroller.userlist);
+router.post('/sendEmail',authcontroller.sendEmail);
 
 
 module.exports = router;
