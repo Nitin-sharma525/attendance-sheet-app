@@ -14,6 +14,9 @@ router.delete('/attendanceDelete', authenticate, attendancecontroller.attendance
 router.post('/joinClassResponse', authenticate, attendancecontroller.joinClassResponse);
 router.post('/monthlyAttendanceReport', authenticate, attendancecontroller.monthlyAttendanceReport);
 router.post('/totalUserJoinRequests', authenticate, attendancecontroller.totalUserJoinRequests);
+router.put('/updatedUserByToken', authenticate, attendancecontroller.updatedUserByToken);
+router.delete('/deleteuserbytoken', authenticate, attendancecontroller.deleteuserbytoken);
+router.post('/createEventByTeacher', authenticate, attendancecontroller.createEventByTeacher);
 
 
 module.exports=router;
