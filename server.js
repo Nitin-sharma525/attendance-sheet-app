@@ -19,7 +19,7 @@ const performanceRoutes = require('./router/performance');
 
 const chatSocket = require("./socket/chatSocket.js");
 
-const port = 4000;
+const port = process.env.PORT || 4000;
 
 connectdb();
 startCronJob();
@@ -46,7 +46,7 @@ const server = http.createServer(app);
 const io = new Server(server, {
     cors: {
         origin: "*",
-        methods: ["GET", "POST"],
+        methods: ["GET", "POST", "PUT", "DELETE"],
     },
 });
 
